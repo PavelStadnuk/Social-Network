@@ -57,11 +57,11 @@ const mapStateToProps = State => ({ initialized: State.app.initialized })
 let AppConteiner = connect(mapStateToProps, { initializeApp })(App)
 let MeinApp = props => {
 	return (
-		<BrowserRouter basename={process.env.PUBLIC_URL}>
+		<HashRouter basename={process.env.PUBLIC_URL}>
 			<Provider store={Store}>
 				<AppConteiner />
 			</Provider>
-		</BrowserRouter>
+		</HashRouter>
 	)
 }
 export default MeinApp
